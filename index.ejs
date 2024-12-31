@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+  
+  <style>
+   .jumbotron {
+  background-image: url('../images/banner1.png');
+  background-size: cover;
+  color: white;
+  height: 600px;
+}
+
+.jumbotron h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding-top: 100px;
+
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+  margin-right: 180px;
+  font-size: bold;
+}
+
+<!--card-->
+.card-section {
+    padding: 50px 0;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+
+    
+  </style>
+  </head>
+  <body>
+    
+   <%- include('./common/header.ejs') %>
+   <header class="jumbotron text-end">
+    <div class="container">
+        <h1 class="display-4 animate__animated animate__bounce">Welcome to Edutech</h1>
+        <p class="lead animate__animated animate__bounce">The Learning App</p>
+       
+    </div>
+</header>
+
+<!-- Card Section -->
+
+<h1></h1>
+
+<section class="py-5">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-4" id="card-one">
+<div class="card h-100">
+ <img src="images/online.jpg" class="card-img-top" alt="Card Image 1">
+
+<div class="card-body">
+<h5 class="card-title">Interactive Videos</h5>
+<p class="card-text">Engage with interactive videos designed to enhance your learning experience.</p>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4" id="card-two">
+<div class="card h-100">
+<img src="images/personal.jpg" class="card-img-top" alt="Card Image 2">
+<div class="card-body">
+<h5 class="card-title">Personalized Learning</h5>
+<p class="card-text">Experience a custom learning experience tailored to your needs.</p>
+ <a href="#" class="btn btn-primary">Learn More</a>
+ </div>
+ </div>
+ </div>
+
+ <div class="col-md-4 mb-4" id="card-three">
+ <div class="card h-100">
+ <img src="images/comprehensive.jpg" class="card-img-top" alt="Card Image 3">
+ <div class="card-body">
+ <h5 class="card-title">Comprehensive Coverage</h5>
+ <p class="card-text">Covering all major subjects to provide a well-rounded education.</p>
+ <a href="#" class="btn btn-primary">Learn More</a>
+ </div>
+</div></div></div>
+</div>
+</section>
+
+
+
+   
+<!--2 column-->
+<div class="container mt-5">
+<div class="row">
+ <!-- First Column: Image -->
+<div class="col-md-6">
+<img src="images/sml-banner2.jpg" class="img-fluid" alt="Descriptive Image">
+</div>
+ <!-- Second Column: Paragraph -->
+ <div class="col-md-6">
+ <h2>Educate</h2>
+  <p>Coding is a process that takes directions from humans and turns them into languages that computers can understand. Coders use different computer programming languages to instruct machines to perform specific tasks, build websites, and create apps.
+
+    Coding is a valuable skill in many industries and can help you qualify for many tech jobs. Most people can learn to code, and coding apps for beginners make the task more accessible.
+    
+    This guide includes a list of some of the best easy programming apps that teach beginners to code.</p>
+  </div>
+  </div>
+  </div>
+
+<!--Our course-->
+
+<div class="container mt-5">
+ 
+<h2>Our Courses</h2>
+<div id="coursesCarousel" class="carousel slide" data-ride="carousel">
+<div class="carousel-inner">        
+  <div class="carousel-item active">
+  <div class="row">
+
+    <%for(var i=0; i<indexdata.length; i++){%>
+  <div class="col-md-4"style="margin-top: 20px;">  
+  <div class="card">
+  <img src="<%= indexdata[i].customfile %>" class="card-img-top" alt="Course 1">
+  <div class="card-body">
+  <h5 class="card-title"><%= indexdata[i].subjectname %></h5>
+  <p class="card-text"><%= indexdata[i].subjectdescription %></p>
+  
+  </div>
+  <a href="/subjectdetails/<%= indexdata[i]._id %>"> <button class="btn ">Details</button></a>
+
+</div>
+
+
+  </div><%} %>
+  
+ <!-- <div class="col-md-4">
+  <div class="card">
+  <img src="images/javascript.jpg" class="card-img-top" alt="Course 2">
+  <div class="card-body">
+  <h5 class="card-title">Javascript</h5>
+  <p class="card-text">Description of course 2.</p>
+  </div> </div>
+  </div>
+
+  <div class="col-md-4">
+  <div class="card">
+  <img src="images/backend.jpg" class="card-img-top" alt="Course 3">
+  <div class="card-body">
+  <h5 class="card-title">Backend</h5>
+  <p class="card-text">Description of course 3.</p>
+  </div>
+  </div></div>
+  </div></div>
+
+ <div class="carousel-item">
+ <div class="row">
+ <div class="col-md-4">
+ <div class="card">
+ <img src="images/data-ana.jpeg" class="card-img-top" alt="Course 4">
+ <div class="card-body">
+  <h5 class="card-title">Dsta Analytics</h5>
+  <p class="card-text">Description of course 4.</p>
+  </div></div>
+  </div>
+                  
+  <div class="col-md-4">
+  <div class="card">
+  <img src="path/to/course5.jpg" class="card-img-top" alt="Course 5">
+  <div class="card-body">
+  <h5 class="card-title">Course 5</h5>
+  <p class="card-text">Description of course 5.</p>
+  </div></div>
+  </div>
+                 
+  <div class="col-md-4">
+  <div class="card">
+ <img src="images/web-development.jpg" class="card-img-top" alt="Course 6">
+ <div class="card-body">
+ <h5 class="card-title">Web Development</h5>
+ <p class="card-text">Description of course 6.</p>
+</div> </div>
+ </div></div>-->
+</div>
+</div>
+     
+    <!--<a class="carousel-control-prev" href="#coursesCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#coursesCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>-->
+  </div>
+</div>
+
+<!--Video-->
+
+<div class="container mt-5">
+  <div class="row">
+    <h2>Recommended Videos</h2>
+    <div class="row">
+    <div class="col-md-4">
+    <div class="card mb-4">
+    <div class="embed-responsive embed-responsive-16by9">
+   <iframe class="embed-responsive-item"  width="412" height="300" src="https://www.youtube.com/embed/BCZ0HcPfVPU?si=v7CAVDpwOBFfxPOT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+   <div class="card-body">
+   <h5 class="card-title">About US</h5>
+   <p class="card-text">It’s time to put that knowledge into practice.</p>
+    </div></div>
+      </div>
+
+     <div class="col-md-4">
+     <div class="card mb-4">
+     <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" width="412" height="300" src="https://www.youtube.com/embed/pV3ZZxaOhLI?si=Uhf0ttjrN5G0cxmd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <div class="card-body">
+     <h5 class="card-title">Testimonials</h5>
+    <p class="card-text">A student Review.</p>
+    </div></div>
+      </div>
+
+      <div class="col-md-4">
+      <div class="card mb-4">
+      <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" width="412" height="300" src="https://www.youtube.com/embed/CLSyaOb3npY?si=PnjoeCOyXCoU7BOZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+      <h5 class="card-title">About Course</h5>
+      <p class="card-text">Bring inspiration and innovation to every developer.</p>
+       </div></div>
+      </div></div>
+
+</div>
+
+<!--Review-->
+<section class="py-5">
+<div class="container">
+<h2 class="text-center mb-4">Student Reviews</h2>
+<div id="reviewsCarousel" class="carousel slide" data-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+    <div class="d-flex justify-content-center">
+                      
+        <div class="card">
+          <img src="images/profile-one.jpg" class="card-img-top">
+        <div class="card-body">
+        <p class="card-text">"Educate has transformed the way I learn. The interactive videos make complex topics easy to understand."</p>
+        <footer class="blockquote-footer">John Doe</footer>
+        </div>
+        </div></div>
+              </div>
+
+        <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+        <div class="card">
+          <img src="images/profile-2.png" class="card-img-top">
+        <div class="card-body">
+        <p class="card-text">"I love the personalized learning paths. They have helped me improve my grades significantly."</p>
+        <footer class="blockquote-footer">Jane Smith</footer>
+        </div></div>
+         </div></div>
+
+        <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+         <div class="card">
+          <img src="images/profile3.png" class="card-img-top">
+        <div class="card-body">
+        <p class="card-text">"The comprehensive coverage of subjects ensures that I am well-prepared for all my exams."</p>
+        <footer class="blockquote-footer">Alice Johnson</footer>
+    </div> </div>
+     </div>
+    </div> </div>
+
+          <a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+ </div>
+</div>
+</section>
+
+
+<!--Animation script-->
+<script  type="text/javascript">
+  $(window).scroll(function(){
+    var positiontop=$(document).scrollTop();
+    console.log(positiontop);
+
+    if((positiontop >10)&&(positiontop < 213)){
+      $('#card-one').addClass('animate__animated animate__slideInUp');
+      $('#card-two').addClass('animate__animated animate__slideInUp');
+      $('#card-three').addClass('animate__animated animate__slideInUp');
+    }
+  })
+
+</script>
+
+
+
+    <%- include('./common/footer.ejs') %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+
+  </body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Byju's</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .heading{
+  width: 100%;
+  height: 100px; 
+ background-color: #030E44;
+  position: sticky;
+  top:0px;
+}
+
+.heading img{
+  width: 100px;
+  height: 80px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 25px;
+  float: left;
+}
+
+
+.heading ul{
+list-style: none;
+}
+.heading ul li{
+width:200px;
+height: 50px;
+margin-left: 10px;
+display: inline-block;
+text-align: center;
+line-height: 50px;
+margin-top: 10px;
+position: sticky;
+top: 0px;
+}
+.heading ul li a{
+color: rgb(211, 99, 0);
+text-decoration: none;
+
+}
+.heading ul li:hover{
+background-color:rgba(19, 1, 57, 0) ;
+color: black;
+}
+.btn {
+  background-color: #ff8e32;
+  background-image: linear-gradient(to right, #FF8E32, #FF5263);
+ 
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-image: linear-gradient(to right, #ff8e32c2, #ff5263ca);
+}
+
+    .jumbotron {
+  background-image: url('../images/banner1.png');
+  background-size: cover;
+  color: white;
+  height: 600px;
+}
+
+.jumbotron h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding-top: 100px;
+
+}
+    .header {
+            background-color: #6A1B9A;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .programs {
+            padding: 30px 0;
+            text-align: center;
+        }
+        .program-card {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: white;
+        }
+        .divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .divider span {
+            font-size: 24px;
+            margin: 0 20px;
+            color: orange;
+        }
+    
+        .card-header {
+            background-color: #4B0082; /* Custom Purple Color */
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        .card-body {
+            min-height: 300px;
+        }
+        .card-advantage {
+            background-color: #FF6347; /* Tomato Color */
+            color: white;
+        }
+        .card-advantage .card-header {
+            background-color: #4B0082; /* Ensure the same header color */
+        }
+    
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="banner">
+    <div class="heading"><div class="img">EDUCATE</div>
+      <ul  class="nav justify-content-center">
+    
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Aboutus</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn" href="/login">Login</a></button> 
+      </li>
+
+        </ul>
+      
+    </div>
+  </div>
+</div>
+</div>
+</nav>
+  <!-- Banner -->
+  <div class="container">
+    <div class="row py-3">
+      <header class="jumbotron text-end">
+        <div class="container">
+            <h1 class="display-4 animate__animated animate__bounce">About Us</h1>
+            
+           
+        </div>
+    </header>
+      
+<!--location section-->
+  <div class="container text-center w-60">
+<h1>Welcome to a new way of learning</h1>
+<p>Educate is a network of tech-enabled classroom centres spread throughout the country with an aim to transform the future of learning.</p>
+</div>
+
+<div class="container">
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-md-6">
+      <img src="images/abt-sm-banner.png" class="img-fluid" alt="Image 1">
+    </div>
+    <div class="col-md-6">
+      <img src="images/india-map.png" class="img-fluid" alt="Image 2">
+    </div>
+  </div>
+</div>
+
+<!--Cobination of online and offline-->
+<div class="header">
+  <h1>Programs at Educate</h1>
+</div>
+<div class="programs container">
+  <h2>A unique combination of...</h2>
+  <div class="row mt-5">
+      <div class="col-md-5 offset-md-1">
+          <div class="program-card p-4">
+              <h3>OFFLINE LEARNING</h3>
+              <p>at Centre</p>
+              <ul class="text-left">
+                  <li>Face-to-face Interaction at Tuition Centre</li>
+                  <li>Attend classes at physical Tuition Centre</li>
+                  <li>State of the art classrooms equipped with latest technology</li>
+                  <li>Pen & paper homework including subjective assessments</li>
+              </ul>
+          </div>
+      </div>
+      <div class="divider col-md-1">
+          <span>+</span>
+      </div>
+      <div class="col-md-5">
+          <div class="program-card p-4">
+              <h3>ONLINE LEARNING</h3>
+              <p>at Home</p>
+              <ul class="text-left">
+                  <li>‘Two-Teacher’ Model Ensuring Conceptual Clarity</li>
+                  <li>Concepts taught by top teachers</li>
+                  <li>High quality video lessons used to simplify concepts</li>
+                  <li>Live doubt resolution and personal attention from the second teacher</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div class="mt-4">
+      <a href="#" class="btn btn-warning btn-lg">Know More</a>
+  </div>
+</div>
+
+<!--With map Location-->
+
+<div class="container mt-5">
+  <h2 class="text-center">Find a centre near you</h2>
+  <p class="text-center">Look for your nearest centre to provide your child with an all-inclusive classroom experience</p>
+  <p class="text-center">Use your current location or Select your city</p>
+
+  <div class="row">
+      <!-- Map and Selection Area -->
+      <div class="col-md-7">
+          <div class="card">
+              <div class="card-body">
+                  <div id="map" style="height: 400px;">
+                      <!-- Embed Google Map -->
+                      <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345096177!2d144.9631576153168!3d-37.81410797975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727cf9c308f99!2sMelbourne%2C%20Victoria%2C%20Australia!5e0!3m2!1sen!2sin!4v1594236460305!5m2!1sen!2sin"
+                          width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                          tabindex="0"></iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Selection and Details Area -->
+      <div class="col-md-5">
+          <div class="mb-3">
+              <select class="form-select" id="selectState">
+                  <option selected>Select State</option>
+                  <option value="1">Delhi</option>
+                  <option value="2">Tamilnadu</option>
+                  <option value="3">Kerala</option>
+              </select>
+        <!--  </div>
+          <div class="mb-3">-->
+              <select class="form-select" id="selectCity">
+                  <option selected>Select City</option>
+                  <option value="1">Dwarka</option>
+                  <option value="2">Chennai</option>
+                  <option value="3">Kochi</option>
+              </select>
+          </div>
+
+          <div class="card">
+              <img src="images/classroom.jpg" class="card-img-top" alt="Location Image">
+              <div class="card-body">
+                  <h5 class="card-title">5th Avenue PWD Colony, Jodhpur</h5>
+                  <p class="card-text">BYJU'S Tuition Centre, 1st Floor, 5th Avenue, PWD Road, Opposite Aakash Institute, Jodhpur - 342001</p>
+                  <a href="#" class="btn btn-primary">Get to the Center</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--3 colum-->
+<div class="container mt-5">
+  <h2 class="text-center text-purple">The Educate Tuition Centre Advantage</h2>
+  <p class="text-center">Why is this the best learning programme to improve your child's academic performance?</p>
+
+  <div class="row text-center">
+      <!-- Features Column -->
+      <div class="col-md-4">
+          <div class="card">
+              <div class="card-header">
+                  Features
+              </div>
+              <div class="card-body">
+                  <p>Number of teachers in a class</p>
+                  <hr>
+                  <p>Personalised attention</p>
+                  <hr>
+                  <p>Teaching format</p>
+                  <hr>
+                  <!-- Add more features as needed -->
+              </div>
+          </div>
+      </div>
+
+      <!-- Regular Tuitions Column -->
+      <div class="col-md-4">
+          <div class="card">
+              <div class="card-header">
+                  Regular Tuitions
+              </div>
+              <div class="card-body">
+                  <p>Single teacher teaching concepts and solving doubts</p>
+                  <hr>
+                  <p>Personalised attention is hard to achieve with a big batch of students</p>
+                  <hr>
+                  <p>Traditional chalk and talk method</p>
+                  <hr>
+                  <!-- Add more comparison points as needed -->
+              </div>
+          </div>
+      </div>
+
+      <!-- BYJU'S Tuition Centre Column -->
+      <div class="col-md-4">
+          <div class="card card-advantage">
+              <div class="card-header">
+                  BYJU'S Tuition Centre
+              </div>
+              <div class="card-body">
+                  <p>2 teachers – one for teaching concepts & one for personalised attention & doubt resolution in classroom</p>
+                  <hr>
+                  <p>Students get personalised attention with two teachers</p>
+                  <hr>
+                  <p>Tech-enabled comprehensive classroom lessons for complete understanding</p>
+                  <hr>
+                  <!-- Add more advantages as needed -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Include Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+
+
+
+    <%- include('./common/footer.ejs') %> 
+  </body>
+</html>

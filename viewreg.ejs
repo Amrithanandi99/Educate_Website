@@ -1,0 +1,44 @@
+<div class="container-fluid row">
+  <div class="">
+    <%- include('header.ejs') %>
+  </div>
+
+  <div class="col-3">
+    <%- include('left.ejs') %>  
+  </div>
+
+<div class="col-md-9">
+  <div class="container mt-3">
+    <h2>VIEW REGISTRATION PEOPLE</h2>
+    <% if(regdata.length>0){ %>
+    <table class="table table-bordered table-sm" id="myTable">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Password</th>
+          <th>Confirm Password</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <%for(var i=0; i<regdata.length; i++){%>
+          <tr>
+            <td><%= regdata[i].fullname %></td>
+            <td><%= regdata[i].emailaddress %></td>
+            <td><%= regdata[i].phonenumber %></td>
+            <td><%= regdata[i].address %></td>
+            <td><%= regdata[i].password %></td>
+            <td><%= regdata[i].confirmpassword %></td>
+            <td><a href="/edit/<%= regdata[i]._id %>"> <button class="btn ">Edit</button></a></td>
+            <td><a href="/delete/<%= regdata[i]._id %>"> <button class="btn ">Delete</button></a></td>
+          </tr><%} %>
+      </tbody>
+    </table>
+  <% } else{ %>
+  No record found
+<%} %>
+  </div>
+</div>

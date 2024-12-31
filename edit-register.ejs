@@ -1,0 +1,35 @@
+<div class="container-fluid row">
+  <div class="">
+    <%- include('header.ejs') %>
+  </div>
+
+  <div class="col-3">
+    <%- include('left.ejs') %>  
+  </div>
+
+  <div class="col-9">
+<form method="post">
+  <div class="mb-3">
+      <label for="fullName" class="form-label">Full Name</label>
+      <input type="text" class="form-control" name="fullName"  value="<%= regdata.name %>"" placeholder="Enter your full name">
+  </div>
+  <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" value="<%= regdata.email %>" placeholder="Enter your email">
+  </div>
+  <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" name="phone" value="<%= regdata.phone %>" placeholder="Enter your phone number">
+  </div>
+  <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" value="<%= regdata.password %>" placeholder="Enter your password">
+  </div>
+  <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" name="confirmPassword" value="<%= regdata.confirmPassword %>" placeholder="Confirm your password">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+</div>
+</div>

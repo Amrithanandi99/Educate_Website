@@ -1,0 +1,39 @@
+<div class="container-fluid row">
+  <div class="">
+    <%- include('header.ejs') %>
+  </div>
+
+  <div class="col-3">
+    <%- include('left.ejs') %>  
+  </div>
+
+<div class="col-md-9">
+  <div class="container mt-3">
+    <h2>Contact Search</h2>
+    <% if(contactdata.length>0){ %>
+    <table class="table table-bordered table-sm" id="myTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%for(var i=0; i<contactdata.length; i++){%>
+          <tr>
+            <td><%= contactdata[i].name %></td>
+            <td><%= contactdata[i].email %></td>
+            <td><%= contactdata[i].message %></td>
+            <td><a href="/edit_2/<%= contactdata[i]._id %>"> <button class="btn ">Edit</button></a></td>
+            <td><a href="/delete_2/<%= contactdata[i]._id %>"> <button class="btn ">Delete</button></a></td>
+          </tr><%} %>
+      </tbody>
+    </table>
+  <% } else{ %>
+  No record found
+<%} %>
+  </div>
+</div>
+
+

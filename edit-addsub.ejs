@@ -1,0 +1,55 @@
+
+<%- include('header.ejs') %>
+<div class="container-fluid row">
+<div class="col-3">
+  <%- include('left.ejs') %>  
+</div>
+
+<div class="col-9">
+<div class="container mt-3">
+
+
+<div class="card">
+  <div class="card-header bg-primary text-white">
+  <h4>Edit New Subject</h4>
+  </div>
+  <div class="card-body">
+  <form method="post" >
+  <div class="form-group">
+  <label for="subjectName">Course Name</label>
+  <input type="text" class="form-control" name="subjectname"  value="<%= adddata.subjectname %>" placeholder="Enter subject name" required>
+  </div>
+                      
+  <div class="form-group">
+   <label for="subjectCode">Subject Code</label>
+  <input type="text" class="form-control" name="subjectcode" value="<%= adddata.subjectcode %>" placeholder="Enter subject code" required>
+  </div>
+                      
+  <div class="form-group">
+  <label for="subjectDescription">Course Description</label>
+  <textarea class="form-control" name="subjectdescription" value="<%= adddata.subjectdescription %>" rows="3" placeholder="Enter subject description" required></textarea>
+   </div>
+                      
+   <div class="form-group">
+   <label for="subjectCategory">Category</label>
+   <select class="form-control" name="subjectcategory" value="<%= adddata.subjectcategory %>" required>
+
+   <option value="" disabled selected>Select category</option>
+   <option value="html-css">HTML and Css</option>
+   <option value="javascript">Javascript</option>
+   <option value="backend">Backend</option>
+   <option value="data-analytic">Data Analytic</option>
+   <option value="web-building">Web Building</option>
+   </select>
+   </div>
+                      
+   <button type="submit" class="btn btn-success">Add Course</button>
+   </form>
+    
+  </div></div>
+  </div></div>
+</div></div></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
